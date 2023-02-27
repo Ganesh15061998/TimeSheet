@@ -1,0 +1,63 @@
+﻿
+@model IEnumerable<TSheet.Data.ProjectMaster>
+@{
+    ViewBag.Title = "DashBoard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+<link href="~/Content/css/sb-admin-2.css" rel="stylesheet" />
+<link href="~/Content/css/TSheetCSS/css/admin1.css" rel="stylesheet" />
+<link rel="stylesheet"
+      type="text/css"
+      href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<div class=" ml-3 ml-2">
+    <button class="btn bg-success text-white">
+        @Html.ActionLink("Add New Projects", "AddProjects", "AddProjectForAdmin", "", new { @class = "text-white h3" })
+    </button>
+</div>
+<div class=" pt-2 ml-3 ml-2 mr-3">
+    <table id="table_id" class="table-bordered pt-3">
+        <thead class="bg-dark text-white">
+            <tr>
+                <th class="p-3">
+                    @Html.DisplayNameFor(model => model.ProjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProjectDescription)
+                </th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="bg-white">
+                    <td class="bg-white p-3">
+                        @Html.DisplayFor(modelItem => item.ProjectName)
+                    </td>
+                    <td class="bg-white p-3">
+                        @Html.DisplayFor(modelItem => item.ProjectDescription)
+                    </td>
+                    @* <td>
+                            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectID }) |
+                            @Html.ActionLink("Details", "Details", new { id=item.ProjectID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectID })
+                        </td>*@
+                    <td class="bg-white p-3"> @Html.ActionLink("Delete", "DeleteProject", new { id = item.ProjectID }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <script type="text/javascript"
+            charset="utf8"
+            src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript"
+            charset="utf8"
+            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <script>
+        $(function () {
+            $("#table_id").dataTable();
+        });
+    </script>

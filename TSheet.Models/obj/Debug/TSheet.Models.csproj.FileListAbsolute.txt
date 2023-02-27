@@ -1,0 +1,16 @@
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\TSheet.Models.dll.config
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\TSheet.Models.dll
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\TSheet.Models.pdb
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\EntityFramework.dll
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\TSheet.Data.dll
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\TSheet.Data.pdb
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\TSheet.Data.dll.config
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\EntityFramework.xml
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\obj\Debug\TSheet.Models.csproj.AssemblyReference.cache
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\obj\Debug\TSheet.Models.csproj.CoreCompileInputs.cache
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\obj\Debug\TSheet.Models.csproj.CopyComplete
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\obj\Debug\TSheet.Models.dll
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\obj\Debug\TSheet.Models.pdb
+C:\Users\ganesh.ugale\Desktop\New folder (2)\testprojectt\TSheetProject\TSheet.Models\bin\Debug\System.Linq.Dynamic.dll

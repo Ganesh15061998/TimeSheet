@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TSheet.Data.DescriptionAndProjectMapping>
+
+@{
+    Layout = Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<link href="~/Content/css/sb-admin-2.css" rel="stylesheet" />
+<style>
+    #hedding {
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+        font-weight: 600
+    }
+</style>
+<link rel="stylesheet"
+      type="text/css"
+      href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
+<link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+<link href="~/Content/css/sb-admin-2.css" rel="stylesheet" />
+<link href="~/Content/css/TSheetCSS/css/admin1.css" rel="stylesheet" />
+<h4 class=" ml-3 pl-2" id="Adminhedding">Projects Assigned To Users</h4>
+<div class="pt-1 pl-3  mr-4 ml-2">
+    <table id="table_id" class=" table-bordered shadow">
+        <thead class="bg-dark text-white">
+
+            <tr>
+                <th class="p-3">
+                    Name
+                </th>
+                <th>
+                    Project
+                </th>
+
+            </tr>
+        </thead>
+        <tbody class="bg-white">
+
+            @foreach (var item in Model)
+            {
+                <tr class="bg-white">
+                    <td class="bg-white p-3">
+                        @Html.DisplayFor(modelItem => item.Registration.FirstName) @Html.DisplayFor(modelItwm => item.Registration.LastName)
+                    </td>
+
+                    <td class="p-3">
+                        @Html.DisplayFor(modelItem => item.ProjectMaster.ProjectName)
+                    </td>
+
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript"
+        charset="utf8"
+        src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript"
+        charset="utf8"
+        src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script>
+    $(function () {
+        $("#table_id").dataTable();
+    });
+</script>

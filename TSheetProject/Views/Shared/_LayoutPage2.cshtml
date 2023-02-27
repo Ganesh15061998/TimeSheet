@@ -1,0 +1,38 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/css/leyoutFile.css" rel="stylesheet" />
+</head>
+<body>
+    
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li>@HttpContext.Current.User.Identity.Name</li>
+                    <li>@Html.ActionLink("Logout", "Logout", "Account")</li>
+                </ul>
+            </div>
+        </nav>
+    
+
+    <div class="row">
+        <div class="col-lg-2 col-md-3   bg-gradient-primary " id="sidebar">
+            <h3 class="text-white text-center pt-4" id="Side-Bar-top-item">TIME SHEET</h3>
+            <hr />
+
+            <div class="pt-2 ">
+                @RenderSection("SideBarAction")
+            </div>
+        </div>
+
+         @RenderBody()
+
+    </div>
+
+</body>
+</html>

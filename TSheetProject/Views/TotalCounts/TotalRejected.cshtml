@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TSheet.Data.TimeSheetAuditTB>
+
+@{
+    Layout = "~/Views/Shared/_UserLayoutPage1.cshtml";
+}
+<link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+<link href="~/Content/css/sb-admin-2.css" rel="stylesheet" />
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<link href="~/Content/css/TSheetCSS/css/User.css" rel="stylesheet" />
+<link rel="stylesheet"
+      type="text/css"
+      href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
+<style>
+    .TotalTimeSheetTitle {
+        font-size: 22px;
+        font-weight: 600;
+        font-family: 'Times New Roman', Times, serif;
+        color: #115C8C
+    }
+</style>
+<body class="body-Bg">
+    <div class="TotalTimeSheetTitle pl-4 h1">
+        Total Approved
+    </div>
+    <div class="pt-2 ml-4 mr-2 mr-3">
+        <table id="table_id" class="table-bordered">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th class="p-3">
+                        Name
+                    </th>
+                    <th>Project</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th>
+                        Rejected By
+                    </th>
+                    <th>Date</th>
+                    <th>Hours Filled</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="bg-white">
+                            @Html.DisplayFor(modelItem => item.TimeSheetDetail.TimeSheetMaster
+     .ProjectMaster.ProjectName)
+                        </td>
+
+                        <td class="bg-white">@Html.DisplayFor(modelItem => item.TimeSheetDetail.TimeSheetMaster.ProjectMaster.ProjectName)</td>
+                        <td class="p-3 bg-white">
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td class="p-3 bg-white">
+                            @Html.DisplayFor(modelItem => item.ApprovedBy)
+                        </td>
+                        <td class="p-3 bg-white">
+                            @{
+                                var formattedDate = String.Format("{0:d}", item.TimeSheetDetail.Date);
+                            }
+                            @Html.DisplayFor(modelItem => formattedDate)
+                        </td>
+                        <td class="p-3 bg-white">@Html.DisplayFor(modelItem => item.TimeSheetDetail.Hours)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    </body>
+    <script type="text/javascript"
+            charset="utf8"
+            src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript"
+            charset="utf8"
+            src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <script>
+        $(function () {
+            $("#table_id").dataTable();
+        });
+    </script>

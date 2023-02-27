@@ -1,0 +1,69 @@
+﻿@model List<TSheet.Models.UserTimeSheetModel>
+
+@{
+    ViewBag.Title = "AllTimeSheet";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+<link href="~/Content/css/sb-admin-2.min.css" rel="stylesheet" />
+<link href="~/Content/css/sb-admin-2.css" rel="stylesheet" />
+<link href="~/Content/css/user.css" rel="stylesheet" />
+
+@section SideBarAction{
+    <div class="p-3">
+        <h5 class=""> <i class="fas fa-home " id="SideBar-Icons"></i> @Html.ActionLink("Dashboard", "DashBoard", "User", "", new { @class = "text-white", @id = "SideBar-items" })</h5>
+        <hr />
+        <h5 class=""><i class="fa-solid fa-clock" id="SideBar-Icons"></i> @Html.ActionLink("Time Sheet", "Add", "TimeSheet", "", new { @class = "text-white", @id = "SideBar-items" })</h5>
+        <hr />
+        <h5 class=""> <i class="fa-solid fa-calendar-days" id="SideBar-Icons"></i> @Html.ActionLink("All Time Sheet", "AllTimeSheet", "User", "", new { @class = "text-white", @id = "SideBar-items" })</h5>
+        <hr />
+        <h5 class=""><i class="fa-solid fa-lock" id="SideBar-Icons"></i> @Html.ActionLink("Change Password", "ChangePassword", "User", "", new { @class = "text-white", @id = "SideBar-items" })</h5>
+        <hr />
+        <h5 class=""><i class="fa-solid fa-bell" id="SideBar-Icons"></i> @Html.ActionLink("Notification", "Notification", "User", "", new { @class = "text-white", @id = "SideBar-items" })</h5>
+        <hr />
+
+    </div>
+}
+<div >
+
+
+    <div><h3>All Time Sheet</h3></div>
+
+    <div id="table-div" class="pt-5">
+        <table class="table border ">
+            <thead>
+                <tr class="">
+                    <th scope="col">From Date</th>
+                    <th scope="col">To date</th>
+                    <th scope="col">total Hrs</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Comment</th>
+                    <th scope="col">ProjectName</th>
+                    @*<th scope="col">Details</th>
+                        <th scope="col">Delete</th>*@
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="border border-end">
+
+                        <td>@Html.DisplayFor(modelItem => item.FromDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ToDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TotalHrs)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Comment)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ProjectName)</td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>
+
+
+

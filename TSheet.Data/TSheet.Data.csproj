@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A769194B-3ED0-46CA-9B62-8E4967B3E623}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSheet.Data</RootNamespace>
+    <AssemblyName>TSheet.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.8\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssignedRole.cs" />
+    <Compile Include="DescriptionAndProjectMapping.cs" />
+    <Compile Include="EmployeeAuditTB.cs" />
+    <Compile Include="Migrations\202211100541301_initial migration.cs" />
+    <Compile Include="Migrations\202211100541301_initial migration.Designer.cs">
+      <DependentUpon>202211100541301_initial migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211100556217_remove sysdiagram.cs" />
+    <Compile Include="Migrations\202211100556217_remove sysdiagram.Designer.cs">
+      <DependentUpon>202211100556217_remove sysdiagram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211140740377_addded.cs" />
+    <Compile Include="Migrations\202211140740377_addded.designer.cs">
+      <DependentUpon>202211140740377_addded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211140915057_RemoveEmployeeCodeinTB.cs" />
+    <Compile Include="Migrations\202211140915057_RemoveEmployeeCodeinTB.designer.cs">
+      <DependentUpon>202211140915057_RemoveEmployeeCodeinTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211170620328_addnewcol.cs" />
+    <Compile Include="Migrations\202211170620328_addnewcol.designer.cs">
+      <DependentUpon>202211170620328_addnewcol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211191502022_allowdsomefieldnullable.cs" />
+    <Compile Include="Migrations\202211191502022_allowdsomefieldnullable.designer.cs">
+      <DependentUpon>202211191502022_allowdsomefieldnullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211191513197_allowdsomefieldnullableagain.cs" />
+    <Compile Include="Migrations\202211191513197_allowdsomefieldnullableagain.designer.cs">
+      <DependentUpon>202211191513197_allowdsomefieldnullableagain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211191522284_allowdsomefieldnullableagain1.cs" />
+    <Compile Include="Migrations\202211191522284_allowdsomefieldnullableagain1.designer.cs">
+      <DependentUpon>202211191522284_allowdsomefieldnullableagain1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211231232318_changedatatype.cs" />
+    <Compile Include="Migrations\202211231232318_changedatatype.designer.cs">
+      <DependentUpon>202211231232318_changedatatype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202211272029593_LittleChangeInRegistraionTb.cs" />
+    <Compile Include="Migrations\202211272029593_LittleChangeInRegistraionTb.designer.cs">
+      <DependentUpon>202211272029593_LittleChangeInRegistraionTb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212121027104_datatypeData.cs" />
+    <Compile Include="Migrations\202212121027104_datatypeData.designer.cs">
+      <DependentUpon>202212121027104_datatypeData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212121034129_ChnageDataType.cs" />
+    <Compile Include="Migrations\202212121034129_ChnageDataType.designer.cs">
+      <DependentUpon>202212121034129_ChnageDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212121135345_ChangeMasterDataType.cs" />
+    <Compile Include="Migrations\202212121135345_ChangeMasterDataType.designer.cs">
+      <DependentUpon>202212121135345_ChangeMasterDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202212130747174_changedviewdatatype.cs" />
+    <Compile Include="Migrations\202212130747174_changedviewdatatype.designer.cs">
+      <DependentUpon>202212130747174_changedviewdatatype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="NotificationsTB.cs" />
+    <Compile Include="ProjectMaster.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="TimeSheetAuditTB.cs" />
+    <Compile Include="TimeSheetDetail.cs" />
+    <Compile Include="TimeSheetMaster.cs" />
+    <Compile Include="TSheetDB.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202211100541301_initial migration.resx">
+      <DependentUpon>202211100541301_initial migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211100556217_remove sysdiagram.resx">
+      <DependentUpon>202211100556217_remove sysdiagram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211140740377_addded.resx">
+      <DependentUpon>202211140740377_addded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211140915057_RemoveEmployeeCodeinTB.resx">
+      <DependentUpon>202211140915057_RemoveEmployeeCodeinTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211170620328_addnewcol.resx">
+      <DependentUpon>202211170620328_addnewcol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211191502022_allowdsomefieldnullable.resx">
+      <DependentUpon>202211191502022_allowdsomefieldnullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211191513197_allowdsomefieldnullableagain.resx">
+      <DependentUpon>202211191513197_allowdsomefieldnullableagain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211191522284_allowdsomefieldnullableagain1.resx">
+      <DependentUpon>202211191522284_allowdsomefieldnullableagain1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211231232318_changedatatype.resx">
+      <DependentUpon>202211231232318_changedatatype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202211272029593_LittleChangeInRegistraionTb.resx">
+      <DependentUpon>202211272029593_LittleChangeInRegistraionTb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212121027104_datatypeData.resx">
+      <DependentUpon>202212121027104_datatypeData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212121034129_ChnageDataType.resx">
+      <DependentUpon>202212121034129_ChnageDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212121135345_ChangeMasterDataType.resx">
+      <DependentUpon>202212121135345_ChangeMasterDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202212130747174_changedviewdatatype.resx">
+      <DependentUpon>202212130747174_changedviewdatatype.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
